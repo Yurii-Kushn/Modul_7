@@ -147,7 +147,10 @@ def get_folder_objects(root_path):
                 pass
 
 
-def main(folder_path):
+def main():
+    path = sys.argv[1]
+    print(f"Start in {path}")
+    folder_path = Path(path)
 
     scan(folder_path)
     for group_name, list_files in groups_files.items():
@@ -166,6 +169,6 @@ def main(folder_path):
 
 if __name__ == '__main__':
     path = sys.argv[1]
-    print(f"Start in {path}")
-    arg = Path(path)
-    main(arg.resolve())
+    #print(f"Start in {path}")
+    #arg = Path(path)
+    #main(arg.resolve())
